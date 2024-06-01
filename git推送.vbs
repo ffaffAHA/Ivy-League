@@ -6,7 +6,7 @@ commitMessage = InputBox("please input commit message:", "Commit Message")
 
 objShell.Run "git commit -m """ & commitMessage & """", 0, True
 
-objShell.Run "git pull origin master --allow-unrelated-histories", 0, True
+' objShell.Run "git pull origin master --allow-unrelated-histories", 0, True
 
 ' 执行git push命令
 objShell.Run "git push", 0, True
