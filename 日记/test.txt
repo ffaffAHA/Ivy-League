@@ -1,0 +1,33 @@
+6.初始化git仓库
+
+Git init
+这时候会有一个.git后缀的文件产生，没看见就是隐藏起来了，可以取消隐藏文件目录进行查看
+
+7.添加本地文件到git暂存区
+
+Git add .
+别忘记后面有个. 这是提交该目录下的全部文件
+
+8.提交一下代码，设置提交说明
+
+Git comment -m "说明"
+9.查看一下本地窗口是否正常连接到远程仓库
+
+git remote -v
+查看远程配置
+
+如果没有，就添加远程仓库的git连接，默认https里的
+
+git remote add origin 这里添加远程仓库连接.git结尾的
+ 
+
+10.合并一下远程仓库的文件到本地（如果远程仓库有更新不合并而直接提交到远程仓库的话，会有错误）
+
+git pull origin master --allow-unrelated-histories
+--allow-unrelated-histories可加可不加，报错就加试一下
+
+Git 通常不允许合并不相关历史的分支。您可以通过添加 `--allow-unrelated-histories` 选项来允许合并不相关的历史。
+
+11.推送到远程仓库master主分支
+
+git push origin master
