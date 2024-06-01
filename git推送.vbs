@@ -6,11 +6,11 @@ Set shell = CreateObject("WScript.Shell")
 ' shell.CurrentDirectory = "C:\your\git\repository\path"
 
 ' 执行Git命令
-shell.Run "git init",1,True 
+shell.Run "git init"
 ' 初始化一个空的Git仓库
-shell.Run "git add .",1,True 
+shell.Run "git add ."
 ' 将所有文件添加到暂存区
-shell.Run "git commit -m ""Initial commit""",1,True 
+shell.Run "git commit -m ""Initial commit"""
 ' 提交暂存区的文件
 
 ' 可以添加更多的Git命令，如git pull, git push等
